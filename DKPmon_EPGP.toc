@@ -1,0 +1,23 @@
+## Interface: 40300
+## Title: DKPmon_EPGP
+## Author: Xerophyte - now maintained by Guild Launch
+## Version: 4.1.3
+## Notes: Addon for adding the Effort Points/Gear Points DKP system to DKPmon
+## X-eMail: support@guildlaunch.com
+## X-Category: Raid
+## X-Website: http://glmods.guildlaunch.com
+## X-License: GPL v2.0
+## RequiredDeps: DKPmon
+## OptionalDeps:
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+Libs\LibStub\LibStub.lua
+Libs\LibDebug-1.0.lua
+Libs\LibGearPoints-1.0.lua
+
+localization.enUS.lua
+
+epgp.lua
+custom.lua
+example.lua
