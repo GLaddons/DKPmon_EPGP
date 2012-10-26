@@ -41,7 +41,7 @@ local L = AceLibrary("AceLocale-2.2"):new("DKPmon_EPGP")
 
 local EPGP = AceOO.Class(DKPmon_DKP_BaseClass,"AceEvent-2.0")
 local Debug = LibStub("LibDebug-1.0")
-local GPLib = LibStub("LibGearPoints-1.0")
+local GPLib = LibStub("LibGearPoints-1.2")
 local dewdrop = AceLibrary("Dewdrop-2.0")
 
 local use_pre_wotlk_formula = 0 -- set to 0 for the WoTLK (new) EPGP formula. Set to 1 to use the TBC (pre-WoTLK or old) formula
@@ -261,12 +261,8 @@ function EPGP.prototype:BuildItemActionMenu(itembutton, dewOptions, iteminfo)
         --DKPmon:Print(iteminfo)
         --DKPmon:Print(iteminfo.link)
         local _, _, Color, Ltype, ItemId, Enchant, Gem1, Gem2, Gem3, Gem4, Suffix, Unique, LinkLvl, Name = string.find(iteminfo.link, "|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?")
-        if (use_pre_wotlk_formula == 0) then
-        	recommended_item_gp_value = GPLib:GetValue(ItemId)
-        else  
-       		recommended_item_gp_value = GPLib:GetGPValuePreWotlk(ItemId)
-       	end
-       	
+        recommended_item_gp_value = GPLib:GetValue(ItemId)
+     	
         if not (recommended_item_gp_value == nil) then
      		self.potentialitemvalues[iteminfo.name].formula_value = recommended_item_gp_value
         else 
