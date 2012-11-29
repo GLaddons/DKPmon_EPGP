@@ -1,7 +1,7 @@
-## Interface: 50001
+## Interface: 50100
 ## Title: DKPmon_EPGP
 ## Author: Xerophyte - now maintained by Guild Launch
-## Version: 4.2.2
+## Version: 4.2.3
 ## Notes: Addon for adding the Effort Points/Gear Points DKP system to DKPmon
 ## X-eMail: support@guildlaunch.com
 ## X-Category: Raid
